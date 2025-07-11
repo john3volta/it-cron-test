@@ -1,3 +1,18 @@
 $color-bg: #131212;
 $color-primary: #FB6542;
-$color-text: #FFFFFF; 
+$color-text: #FFFFFF;
+
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 768px;
+
+@mixin tablet {
+    @media (max-width: $breakpoint-tablet) {
+      @content;
+    }
+}
+  
+@mixin mobile {
+    @media (max-width: $breakpoint-mobile) {
+        @content;
+    }
+} 

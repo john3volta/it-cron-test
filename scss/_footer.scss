@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  gap: rem-calc(46);
+  gap: clamp(rem-calc(24), 2.5vw, rem-calc(46));
 
   &__circle-wrapper {
     position: absolute;
@@ -25,9 +25,9 @@
     position: absolute;
     left: rem-calc(-90);
     bottom: rem-calc(-336);
-    width: rem-calc(674);
-    height: rem-calc(674);
-    border: rem-calc(100) solid $color-primary;
+    width: clamp(rem-calc(490), 35vw, rem-calc(674));
+    height: clamp(rem-calc(490), 35vw, rem-calc(674));
+    border: clamp(rem-calc(50), 6vw, rem-calc(100)) solid $color-primary;
     border-radius: 50%;
     z-index: 1;
     pointer-events: none;
@@ -38,12 +38,16 @@
   }
 
   &__socials {
+    position: relative;
     margin-right: clamp(rem-calc(24), 5vw, rem-calc(100));
     display: flex;
     gap: rem-calc(32);
+    z-index: 10;
   }
 
   .social {
+    width: clamp(rem-calc(24), 4vw, rem-calc(72));
+    height: clamp(rem-calc(24), 4vw, rem-calc(72));
     svg {
       transition: color 0.3s;
     }
@@ -51,6 +55,17 @@
       svg {
         color: $color-primary;
       }
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    &__circle-wrapper {
+      max-width: rem-calc(584);
+      max-height: rem-calc(338);
+      width: 100%;
+      height: 100%;
     }
   }
 }

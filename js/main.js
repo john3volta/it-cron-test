@@ -18,4 +18,24 @@ document.addEventListener('DOMContentLoaded', function () {
     container.style.gridTemplateRows = `repeat(${rows}, var(--square-size, 14px))`;
     container.style.gridGap = '14px';
   });
-}); 
+});
+
+// Мобильное меню
+const dots = document.querySelector('.header__dots');
+const nav = document.querySelector('.header__nav');
+
+if (dots && nav) {
+  dots.addEventListener('click', function () {
+    nav.classList.toggle('header__nav--open');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (
+      nav.classList.contains('header__nav--open') &&
+      !nav.contains(e.target) &&
+      !dots.contains(e.target)
+    ) {
+      nav.classList.remove('header__nav--open');
+    }
+  });
+} 

@@ -4,12 +4,11 @@
 .hero {
   position: relative;
   display: flex;
-  justify-content: flex-end;
 
   &__circle {
     position: absolute;
-    top: clamp(rem-calc(24), 2.5vw, rem-calc(50));
-    left: clamp(rem-calc(50), 10.5vw, rem-calc(210));
+    top: calc(rem-calc(50) - calc(rem-calc(192) - 10vw));
+    left: calc(rem-calc(210) - calc(rem-calc(192) - 10vw));
     width: clamp(rem-calc(320), 38vw, rem-calc(750));
     height: clamp(rem-calc(320), 38vw, rem-calc(750));
     background: $color-primary;
@@ -29,7 +28,7 @@
   }
 
   &__content {
-    margin: rem-calc(345) rem-calc(214) 0 0;
+    margin: clamp(rem-calc(24), 19vw, rem-calc(345)) rem-calc(24) 0 clamp(rem-calc(24), 50vw, rem-calc(815));
     max-width: rem-calc(900);
     width: 100%;
     display: flex;
@@ -61,28 +60,37 @@
     border-radius: rem-calc(4);
     z-index: 2;
     &--left {
-      width: rem-calc(44);
-      height: rem-calc(44);
-      top: rem-calc(206);
-      left: rem-calc(132);
+      width: clamp(rem-calc(22), 2.5vw, rem-calc(44));
+      height: clamp(rem-calc(22), 2.5vw, rem-calc(44));
+      top: calc(rem-calc(206) - calc(rem-calc(576) - 30vw));
+      left: calc(rem-calc(132) + calc(rem-calc(192) - 10vw));
       border-width: rem-calc(4);
       transform: rotate(-15deg);
     }
     &--right {
-      width: rem-calc(24);
-      height: rem-calc(24);
-      top: rem-calc(276);
-      right: rem-calc(346);
+      width: clamp(rem-calc(12), 2.5vw, rem-calc(24));
+      height: clamp(rem-calc(12), 2.5vw, rem-calc(24));
+      top: calc(rem-calc(276) - calc(rem-calc(576) - 30vw));
+      right: calc(rem-calc(346) + calc(rem-calc(96) - 5vw));
       border-width: rem-calc(2);
       transform: rotate(-45deg);
     }
     &--bottom {
-      width: rem-calc(64);
-      height: rem-calc(64);
-      top: rem-calc(760);
-      left: rem-calc(914);
+      width: clamp(rem-calc(32), 2.5vw, rem-calc(64));
+      height: clamp(rem-calc(32), 2.5vw, rem-calc(64));
+      top:  calc(rem-calc(760) - calc(rem-calc(576) - 30vw));
+      left: calc(rem-calc(914) - calc(rem-calc(768) - 40vw));
       border-width: rem-calc(4);
       transform: rotate(-45deg);
     }
   }
-} 
+}
+
+@include mobile {
+  .hero {
+    &__content {
+      margin: calc(rem-calc(146) + calc(rem-calc(192) - 10vw)) rem-calc(16) 0 rem-calc(16);
+      max-width: rem-calc(340);
+    }
+  }
+}
