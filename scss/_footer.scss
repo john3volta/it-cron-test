@@ -42,4 +42,15 @@
     display: flex;
     gap: rem-calc(32);
   }
+
+  .social {
+    svg {
+      transition: color 0.3s;
+    }
+    &:hover {
+      svg {
+        color: $color-primary;
+      }
+    }
+  }
 }
