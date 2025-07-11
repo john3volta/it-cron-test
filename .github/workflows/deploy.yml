@@ -24,11 +24,6 @@ jobs:
       - name: Build CSS
         run: npm run build
 
-      - name: List css contents
-        run: |
-          echo "=== css ==="
-          ls -l css || echo "no css"
-
       - name: Prepare static files
         run: |
           rm -rf dist
@@ -38,13 +33,6 @@ jobs:
           cp -r js dist/
           cp -r img dist/
           cp -r fonts dist/
-
-      - name: List dist contents
-        run: |
-          echo "=== dist ==="
-          ls -l dist
-          echo "=== dist/css ==="
-          ls -l dist/css || echo "no dist/css"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
