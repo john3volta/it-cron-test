@@ -5,22 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IT CRON</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="fonts/geometria-cufonfonts-webfont/style.css">
 </head>
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="header__decor header__decor--squares"></div>
-    <nav class="header__nav">
-      <ul class="header__menu">
-        <li class="header__menu-item"><a href="#">Кейсы</a></li>
-        <li class="header__menu-item"><a href="#">Компания</a></li>
-        <li class="header__menu-item"><a href="#">Услуги</a></li>
-        <li class="header__menu-item"><a href="#">Контакты</a></li>
-      </ul>
-    </nav>
-    <div class="header__decor header__decor--abstract"></div>
-    <div class="header__decor header__decor--quarter-circle"></div>
-    <div class="header__decor header__decor--dots"></div>
+    <div class="header__container">
+      <div class="header__main">
+        <div class="header__decor-squares" data-rows="2" data-cols="7"></div>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item"><a href="#">Кейсы</a></li>
+            <li class="header__menu-item"><a href="#">Компания</a></li>
+            <li class="header__menu-item"><a href="#">Услуги</a></li>
+            <li class="header__menu-item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__dots">
+        <span class="header__dot"></span>
+        <span class="header__dot"></span>
+        <span class="header__dot"></span>
+      </div>
+    </div>
+    <img class="header__abstraction" src="img/svg/abstraction.svg" alt="Абстракция">
+    <div class="header__circle-wrapper">
+      <div class="header__circle"></div>
+    </div>
   </header>
 
   <!-- Hero Section -->
@@ -46,5 +57,6 @@
       <a class="social social--tg" href="#"><img src="img/Telegram_black.png" alt="Telegram"></a>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html> 

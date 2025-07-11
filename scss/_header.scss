@@ -1,0 +1,102 @@
+@use 'functions' as *;
+@use 'variables' as *;
+
+.header {
+  position: relative;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: clamp(rem-calc(32), 2.6vw, rem-calc(72));
+    position: relative; 
+    z-index: 10;
+  }
+
+  &__main {
+    display: flex;
+    gap: clamp(rem-calc(24), 4.5vw, rem-calc(84));
+  }
+
+  &__decor-squares {
+    margin-left: rem-calc(14);
+    display: grid;
+    gap: rem-calc(14);
+    margin-right: rem-calc(40);
+  }
+
+  &__square {
+    width: rem-calc(14);
+    height: rem-calc(14);
+    background: $color-text;
+    opacity: 0.3;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__menu {
+    display: flex;
+    gap: clamp(rem-calc(16), 1vw, rem-calc(32));
+    align-items: center;
+  }
+
+  &__menu-item a {
+    font-size: rem-calc(24);
+    line-height: 120%;
+    text-transform: uppercase;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__dots {
+    margin-right: clamp(rem-calc(24), 4.9vw, rem-calc(100));
+    display: flex;
+    gap: rem-calc(10);
+    align-items: center;
+  }
+
+  &__dot {
+    width: rem-calc(10);
+    height: rem-calc(10);
+    background: $color-text;
+    border-radius: 50%;
+  }
+
+  &__abstraction {
+    position: absolute;
+    top: rem-calc(-130);
+    right: rem-calc(484);
+    width: rem-calc(566);
+    height: rem-calc(364);
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__circle-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem-calc(434);
+    height: rem-calc(434);
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__circle {
+    position: absolute;
+    top: rem-calc(-434);
+    right: rem-calc(-434);
+    width: rem-calc(868);
+    height: rem-calc(868);
+    border: rem-calc(150) solid $color-primary;
+    border-radius: 50%;
+  }
+} 
