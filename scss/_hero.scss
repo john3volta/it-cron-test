@@ -1,0 +1,92 @@
+@use 'functions' as *;
+@use 'variables' as *;
+
+.hero {
+  position: relative;
+  min-height: 52vh;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  &__circle {
+    position: absolute;
+    top: clamp(rem-calc(24), 2.5vw, rem-calc(50));
+    left: clamp(rem-calc(50), 10.5vw, rem-calc(210));
+    width: clamp(rem-calc(320), 38vw, rem-calc(750));
+    height: clamp(rem-calc(320), 38vw, rem-calc(750));
+    background: $color-primary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: 0 0 rem-calc(100) 0 rgba(0,0,0,0.15);
+  }
+
+  &__clock {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    z-index: 2;
+  }
+
+  &__content {
+    position: absolute;
+    top: rem-calc(344);
+    right: rem-calc(214);
+    max-width: rem-calc(900);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 3;
+  }
+
+  &__content-title {
+    font-family: 'Gotham Pro', Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(rem-calc(48), 10vw, rem-calc(200));
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+
+  &__content-subtitle {
+    font-family: 'Geometria', Arial, sans-serif;
+    font-weight: 500;
+    font-size: clamp(rem-calc(24), 2.5vw, rem-calc(48));
+    line-height: 140%;
+  }
+
+  &__diamond {
+    position: absolute;
+    background: transparent;
+    border-style: solid;
+    border-radius: rem-calc(4);
+    z-index: 2;
+    &--left {
+      width: rem-calc(44);
+      height: rem-calc(44);
+      top: rem-calc(206);
+      left: rem-calc(132);
+      border-width: rem-calc(4);
+      transform: rotate(-15deg);
+    }
+    &--right {
+      width: rem-calc(24);
+      height: rem-calc(24);
+      top: rem-calc(276);
+      right: rem-calc(346);
+      border-width: rem-calc(2);
+      transform: rotate(-45deg);
+    }
+    &--bottom {
+      width: rem-calc(64);
+      height: rem-calc(64);
+      top: rem-calc(760);
+      left: rem-calc(914);
+      border-width: rem-calc(4);
+      transform: rotate(-45deg);
+    }
+  }
+} 

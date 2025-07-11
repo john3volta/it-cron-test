@@ -8,28 +8,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: clamp(rem-calc(32), 2.6vw, rem-calc(72));
+    padding-top: clamp(rem-calc(32), 3.6vw, rem-calc(72));
     position: relative; 
     z-index: 10;
   }
 
   &__main {
     display: flex;
-    gap: clamp(rem-calc(24), 4.5vw, rem-calc(84));
+    gap: clamp(rem-calc(24), 4.2vw, rem-calc(84));
   }
 
-  &__decor-squares {
+  &__squares {
     margin-left: rem-calc(14);
-    display: grid;
-    gap: rem-calc(14);
-    margin-right: rem-calc(40);
-  }
-
-  &__square {
-    width: rem-calc(14);
-    height: rem-calc(14);
-    background: $color-text;
-    opacity: 0.3;
   }
 
   &__nav {
@@ -39,7 +29,7 @@
 
   &__menu {
     display: flex;
-    gap: clamp(rem-calc(16), 1vw, rem-calc(32));
+    gap: clamp(rem-calc(16), 1.6vw, rem-calc(32));
     align-items: center;
   }
 
@@ -55,7 +45,7 @@
   }
 
   &__dots {
-    margin-right: clamp(rem-calc(24), 4.9vw, rem-calc(100));
+    margin-right: clamp(rem-calc(24), 5vw, rem-calc(100));
     display: flex;
     gap: rem-calc(10);
     align-items: center;
