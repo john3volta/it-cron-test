@@ -1,0 +1,45 @@
+@use 'functions' as *;
+@use 'variables' as *;
+
+.footer {
+  position: relative;
+  padding-bottom: clamp(rem-calc(24), 3vw, rem-calc(60));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: rem-calc(46);
+
+  &__circle-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: rem-calc(584);
+    height: rem-calc(338);
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__circle {
+    position: absolute;
+    left: rem-calc(-90);
+    bottom: rem-calc(-336);
+    width: rem-calc(674);
+    height: rem-calc(674);
+    border: rem-calc(100) solid $color-primary;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__squares {
+    margin-right: clamp(rem-calc(24), 5vw, rem-calc(100));
+  }
+
+  &__socials {
+    margin-right: clamp(rem-calc(24), 5vw, rem-calc(100));
+    display: flex;
+    gap: rem-calc(32);
+  }
+}
