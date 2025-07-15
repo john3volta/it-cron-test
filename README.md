@@ -2,6 +2,8 @@
 
 Адаптивная верстка лендинга для компании IT Cron.
 
+https://john3volta.github.io/it-cron-test/
+
 ## Технологии
 
 - HTML5
